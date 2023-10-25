@@ -16,8 +16,15 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class IncomingletterResource extends Resource
 {
     protected static ?string $model = Incomingletter::class;
+    protected static ?string $navigationGroup = 'Data Surat';
+    protected static ?int $navigationSort = 1;
+    protected static ?string $navigationLabel = 'Surat Masuk';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static ?string $modelLabel = 'Surat Masuk';
+    protected static ?string $pluralModelLabel = 'Surat Masuk';
+
+    protected static ?string $navigationIcon = 'heroicon-o-envelope-open';
 
     public static function form(Form $form): Form
     {
@@ -45,14 +52,14 @@ class IncomingletterResource extends Resource
                 ]),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -60,5 +67,5 @@ class IncomingletterResource extends Resource
             'create' => Pages\CreateIncomingletter::route('/create'),
             'edit' => Pages\EditIncomingletter::route('/{record}/edit'),
         ];
-    }    
+    }
 }

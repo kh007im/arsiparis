@@ -9,4 +9,5 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateClassification extends CreateRecord
 {
     protected static string $resource = ClassificationResource::class;
+    protected static ?string $title = 'Tambah Klasifikasi';
 }

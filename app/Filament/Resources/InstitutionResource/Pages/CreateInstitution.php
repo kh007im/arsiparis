@@ -9,4 +9,6 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateInstitution extends CreateRecord
 {
     protected static string $resource = InstitutionResource::class;
+    protected static ?string $title = 'Tambah Lembaga';
+
 }

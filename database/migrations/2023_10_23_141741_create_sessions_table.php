@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('tahun')->default(2023);
             $table->string('nama_tahun')->default(2023);
-            $table->tinyInteger('status_altif')->default(1);
+            $table->boolean('status_aktif')->default(1);
             $table->foreignId('institution_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
