@@ -31,7 +31,7 @@ class Outgoingletter extends Model
 
     public function session(): BelongsTo
     {
-        return $this->belongsTo(Session::class);
+        return $this->belongsTo(Session::class)->where('status_aktif', 1);
     }
 
     public function institution(): BelongsTo

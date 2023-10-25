@@ -27,9 +27,9 @@ class OutgoinglettersRelationManager extends RelationManager
         return $form
             ->schema([
                 Select::make('session_id')
-                    ->relationship(
-                        'session', 'nama_tahun'
-                    )->label('Tahun Aktif'),
+                    ->relationship('session', 'nama_tahun')
+                    ->preload()
+                    ->label('Tahun Aktif'),
                 TextInput::make('ol_noagenda')
                     ->required()
                     ->maxLength(255)->label('No Agenda'),
